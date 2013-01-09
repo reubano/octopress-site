@@ -33,9 +33,9 @@ $cream:			$base2;
 $solar-white:	$base3;
 
 // Main Link Colors
-$link-color: mix($solar-orange, $black, 80);
+$link-color: darken(mix($solar-orange, $solar-yellow, 30), 10);
 $link-color-hover: darken($solar-blue, 5);
-$link-color-visited: darken($link-color-hover, 20);
+$link-color-visited: mix($solar-yellow, $white, 60);
 $link-color-active: adjust-color($link-color, $lightness: -15);
 
 // Main Section Colors
@@ -43,9 +43,9 @@ $main-bg: $solar-yellow;
 $page-bg: $cream;
 $article-border: $solar-magenta;
 
-$header-bg: darken($main-bg, 15);
+$header-bg: darken($main-bg, 0);
 $header-border: lighten($solar-orange, 15);
-$title-color: lighten($main-bg, 10);
+$title-color: darken($main-bg, 15);
 $subtitle-color: darken($title-color, 10);
 
 $text-color: $cream;
