@@ -12,10 +12,20 @@
         {% comment %} As `page.comments` is empty, we must be on the index page. {% endcomment %}
         var disqus_script = 'count.js';
       {% endif %}
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
+    
+    (function(w, d, s) {
+      function go(){
+        var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.src = url; js.id = id; js.async = true;
+        fjs.parentNode.insertBefore(js, fjs);
+      };
+        load('http://' + disqus_shortname + '.disqus.com/' + disqus_script, 'discuss');
+      }
+      if (w.addEventListener) { w.addEventListener("load", go, false); }
+      else if (w.attachEvent) { w.attachEvent("onload",go); }
+    }(window, document, 'script'));
+
 </script>
 {% endif %}
+

@@ -1,11 +1,18 @@
 {% if site.twitter_follow_button or site.twitter_tweet_button %}
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
+	<script>
+		(function(w, d, s) {
+		  function go(){
+		    var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+			  if (d.getElementById(id)) {return;}
+			  js = d.createElement(s); js.src = url; js.id = id; js.async = true;
+			  fjs.parentNode.insertBefore(js, fjs);
+			};
+		    load('http://platform.twitter.com/widgets.js', 'twitterwid');
+		  }
+		  if (w.addEventListener) { w.addEventListener("load", go, false); }
+		  else if (w.attachEvent) { w.attachEvent("onload",go); }
+		}(window, document, 'script'));
+	</script>
 {% endif %}
+
+

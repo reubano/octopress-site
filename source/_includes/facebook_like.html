@@ -1,10 +1,17 @@
 {% if site.facebook_like %}
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+		(function(w, d, s) {
+		  function go(){
+		    var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+			  if (d.getElementById(id)) {return;}
+			  js = d.createElement(s); js.src = url; js.id = id; js.async = true;
+			  fjs.parentNode.insertBefore(js, fjs);
+			};
+		    load('//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1', 'facebook-jssdk');
+		  }
+		  if (w.addEventListener) { w.addEventListener("load", go, false); }
+		  else if (w.attachEvent) { w.attachEvent("onload",go); }
+		}(window, document, 'script'));
+	</script>
 {% endif %}
