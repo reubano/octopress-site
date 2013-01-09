@@ -3,11 +3,12 @@
 # ----------------------- #
 
 url: http://reubano.github.com
-title: A Man with Nothing To Say
-subtitle: My nothings on technology, finance, and life.
+title: reubano
+#subtitle: My nothings on technology, finance, and life
 author: Reuben Cummings
 simple_search: http://google.com/search
-description: finance on technology blog covering mac osx, python, php, linux, investing, coding, scripting
+description: 'My personal website covering finance, technology, mac osx, and, web application development'
+keywords: mac, osx, python, php, pear, linux, investing, asset allocation, portfolio performance, risk, return, web application development, restful api, flask, node
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -45,13 +46,11 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
-
-# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
-# and add an array with the asides you want to use.
-# blog_index_asides:
-# post_asides:
-# page_asides:
+default_asides: []
+custom_asides: [custom/asides/popular_posts.html,asides/github.html, asides/twitter.html, asides/googleplus.html]
+blog_index_asides: [asides/recent_posts.html, custom/asides/popular_posts.html, asides/twitter.html]
+post_asides: [custom/asides/related_posts.html, asides/recent_posts.html, custom/asides/popular_posts.html]
+home_asides: [custom/asides/about.html, asides/recent_posts.html, custom/asides/popular_posts.html]
 
 # ----------------------- #
 #   3rd Party Settings    #
@@ -59,41 +58,41 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 
 # Github repositories
 github_user: reubano
-github_repo_count: 5
+github_repo_count: 3
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
 twitter_user: reubano
-twitter_tweet_count: 5
+twitter_tweet_count: 3
 twitter_show_replies: false
 twitter_follow_button: true
 twitter_show_follower_count: false
 twitter_tweet_button: true
 
-# Google +1
-google_plus_one: true
-google_plus_one_size: medium
-
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
 googleplus_user: reubano
-googleplus_hidden: false
+googleplus_hidden: true
 
 # Pinboard
-pinboard_user:
-pinboard_count: 3
+#pinboard_user: reubano
+#pinboard_count: 3
 
 # Delicious
-delicious_user:
-delicious_count: 3
+#delicious_user:
+#delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: reubano
-disqus_show_comment_count: true
+#disqus_short_name: reubano
+#disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-35222393-1
 
 # Facebook Like
 facebook_like: true
+
+# Google +1
+google_plus_one: true
+google_plus_one_size: medium
