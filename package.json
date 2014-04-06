@@ -1,0 +1,11 @@
+{
+  "author": "Reuben Cummings",
+  "name": "octopress",
+  "description": "My octopress site",
+  "version": "1.0.0",
+  "homepage": "",
+  "environment": "web",
+  "license": "MIT",
+  "keywords": ["blog", "site"],
+  "repository": {"type": "git", "url": ""}
+}
