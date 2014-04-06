@@ -27,7 +27,7 @@ email: reubano@gmail.com
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /
+root: /octopress-site
 permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
