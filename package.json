@@ -6,7 +6,7 @@
   "homepage": "",
   "environment": "web",
   "license": "MIT",
-  "keywords": ["blog"],
+  "keywords": ["blog", "site"],
   "type": "site",
   "repository": {"type": "git", "url": ""}
 }
